@@ -432,7 +432,8 @@ class SummaryScreen(BaseScreen):
         hostname_text_width, hostname_text_height = Utils.get_text_size(self.display, hostname.lower(), big_font)
         font_size = 20
         while hostname_text_width > self.display.width:
-          big_font = self.font(font_size -= 1)
+          font_size -= 1
+          big_font = self.font(font_size)
           hostname_text_width, hostname_text_height = Utils.get_text_size(self.display, hostname.lower(), big_font)
 
         self.display.draw.text( (0, -2), hostname.lower(), font=big_font, fill=255)
