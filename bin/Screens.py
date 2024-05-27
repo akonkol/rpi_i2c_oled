@@ -51,8 +51,8 @@ class Display:
             self.image.save(path)
 
 class BaseScreen:
-    font_path = Utils.current_dir + "/fonts/DejaVuSans.ttf"
-    font_bold_path = Utils.current_dir + "/fonts/DejaVuSans-Bold.ttf"
+    font_path = Utils.current_dir + "/fonts/DejaVuSansMono.ttf"
+    font_bold_path = Utils.current_dir + "/fonts/DejaVuSansMono-Bold.ttf"
     fonts = {}
 
     def __init__(self, duration, display = Display(), utils = Utils(), config = None):
@@ -377,6 +377,7 @@ class CpuScreen(BaseScreen):
         
         self.display.show()
         time.sleep(self.duration)
+<<<<<<< HEAD
 class SummaryScreen(BaseScreen):
     @property
     def text(self):
