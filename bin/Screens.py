@@ -377,7 +377,6 @@ class CpuScreen(BaseScreen):
         
         self.display.show()
         time.sleep(self.duration)
-<<<<<<< HEAD
 class SummaryScreen(BaseScreen):
     @property
     def text(self):
