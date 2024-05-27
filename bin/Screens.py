@@ -429,7 +429,7 @@ class SummaryScreen(BaseScreen):
         text = self.text
 
         self.logger.info("Rendering summary text: " + text)
-        self.display.draw.text( (0, -2), hostname, font=big_font, fill=255)
+        self.display.draw.text( (0, -2), hostname.lower(), font=big_font, fill=255)
 
         self.display.draw.text((x, top + 24), ipv4, font=small_font, fill=255)
         self.display.draw.text((width - 35 , top + 24), self.utils.display_time(float(uptime_in_seconds.strip()), 4), font=small_font, fill=255)
